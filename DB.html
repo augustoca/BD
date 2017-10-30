@@ -3,41 +3,52 @@
 <head>
 	<title>Proyecto Base de Datos</title>
 	<meta charset="utf-8">
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <style type="text/css">
 	.sidebar {
 		background-color: #5cd65c;
 		width: 20%;
 		list-style: none;
-		height: 100%;
+		height: 1000px;
+		overflow: scroll;
 	}
 	.sidebarli{
 		border: solid 0.25px #fff;
 		width: 100%;
+		padding: 5px;
 	}
 	.sidebarli:hover{
 		border: solid 0.25px #fff;
-		width: 22%;
 		cursor: pointer;
+		padding: 5px;
+		background-color:#84EEA1; 
 	}
 	body {
 		background-color:#b3d9ff;
 	}
 </style>
 <body>
-<div  id="fondo">
-	<div class="container">
-		<h1>Escuela de fútbol.</h1>
+<div  id="fondo">	
+	<div class="sidebar col-sm-4">
+	<div class="">
+		<img src="http://htmlcolorcodes.com/es/">
 	</div>
-	<div class="sidebar">
 		<li class="sidebarli">a</li>
 		<li class="sidebarli">b</li>
 		<li class="sidebarli">c</li>
 		<li class="sidebarli">d</li>
 		<li class="sidebarli">e</li>
 		<li class="sidebarli">f</li>
+	</div>
+	<div class="container col-xs-8">
+		<h1>Escuela de fútbol.</h1>
 	</div>
 </div>
 </body>
