@@ -16,8 +16,9 @@
 		background-color: #5cd65c;
 		width: 20%;
 		list-style: none;
-		height: 1000px;
-		overflow: scroll;
+		height: 100%;
+		position: absolute;
+
 	}
 	.sidebarli{
 		border: solid 0.25px #fff;
@@ -30,26 +31,30 @@
 		padding: 5px;
 		background-color:#84EEA1; 
 	}
+	.content {
+		margin-top: 10%;
+	}
 	body {
 		background-color:#b3d9ff;
 	}
 </style>
 <body>
 <div  id="fondo">	
-	<div class="sidebar col-sm-4">
-	<div class="">
-		<img src="http://htmlcolorcodes.com/es/">
+	<div class="sidebar col-xs-4">
+		<ul class="content">
+			<li class="sidebarli">a</li>
+			<li class="sidebarli">b</li>
+			<li class="sidebarli">c</li>
+			<li class="sidebarli">d</li>
+			<li class="sidebarli">e</li>
+			<li class="sidebarli">f</li>
+		</ul>
 	</div>
-		<li class="sidebarli">a</li>
-		<li class="sidebarli">b</li>
-		<li class="sidebarli">c</li>
-		<li class="sidebarli">d</li>
-		<li class="sidebarli">e</li>
-		<li class="sidebarli">f</li>
-	</div>
-	<div class="container col-xs-8">
-		<h1>Escuela de fútbol.</h1>
-	</div>
+	<center>
+		<div class="col-xs-8">		
+			<h1>Escuela de fútbol.</h1>		
+		</div>
+	</center>
 </div>
 </body>
 </html>
