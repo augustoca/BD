@@ -18,7 +18,6 @@
 		list-style: none;
 		height: 100%;
 		position: absolute;
-
 	}
 	.sidebarli{
 		border: solid 0.25px #fff;
@@ -32,7 +31,13 @@
 		background-color:#84EEA1; 
 	}
 	.content {
-		margin-top: 10%;
+		margin-top: 20%;
+		overflow: hidden;
+	}
+	#tittle {
+		width: 500px;
+		margin-left: 20%;
+		font-size: 10px;
 	}
 	body {
 		background-color:#b3d9ff;
@@ -41,18 +46,21 @@
 <body>
 <div  id="fondo">	
 	<div class="sidebar col-xs-4">
+		<div id="imagen-sidebar">
+			<img src="">
+		</div>
 		<ul class="content">
-			<li class="sidebarli">a</li>
-			<li class="sidebarli">b</li>
-			<li class="sidebarli">c</li>
-			<li class="sidebarli">d</li>
-			<li class="sidebarli">e</li>
-			<li class="sidebarli">f</li>
+			<li class="sidebarli">Venta de Uniformes</li>
+			<li class="sidebarli">Crear Jugador</li>
+			<li class="sidebarli">Crear Representante</li>
+			<li class="sidebarli">Inventario</li>
+			<li class="sidebarli">Contacto</li>
+			<li class="sidebarli">Sobre Nosotros</li>
 		</ul>
 	</div>
 	<center>
-		<div class="col-xs-8">		
-			<h1>Escuela de fútbol.</h1>		
+		<div class="col-xs-8" id="tittle">		
+			<center><h1>Escuela de fútbol.</h1></center>		
 		</div>
 	</center>
 </div>
