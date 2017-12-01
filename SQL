@@ -1,4 +1,6 @@
 create database futbol;
 use futbol;
 
-create table representantes (id int(11), nombre varchar(50) not null, apellido varchar(50) not null, tel_casa varchar(50),tel_ofi varchar(50), tel_ul varchar(50), sexo char(1)  not null, calle varchar(255)  not null, urb varchar(255) not null,constraint pkid primary key (id));
+create table representantes (ci int(11) not null, nombre varchar(50) not null, apellido varchar(50) not null, tel_casa varchar(50) not null, tel_ofi varchar(50) not null, tel_ul varchar(50) not null, sexo char(1) not null, calle varchar(255) not null, urb varchar(255) not null, constraint pkci primary key (ci));
+create table jugadores (ci int(11) not null, nombre varchar(50) not null, apellido varchar(50) not null, celular varchar(11) not null, grado varchar(10) not null, parentesco varchar(20) not null, constraint pkci primary key(ci))
+create table trabajador (ci int(11) not null, nombre varchar(50) not null, apellido varchar(50) not null, tel_casa(11) not null, tel_ofi(11) not null, fec_nac date, nacionalidad varchar(20) not null, sexo char(1) not null, tipo,constraint primary ke        )
