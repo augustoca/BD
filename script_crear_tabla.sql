@@ -48,14 +48,23 @@ create table trabajador (
 	profesion varchar(20),
 	check (sexo in ('M','F')),
 	check (tipo in ('Administrativo','Tecnico','Entrenador')),
-	constraint primary key(ci)
+	constraint pktrabajador primary key(ci)
 );
 
 create table lugar (
 	cod_lugar varchar(20) not null,
 	descripcion varchar(50) not null,
 	tipo varchar (15) not null,
+	cod_lugarp varchar(20),
+	check (tipo in ('ciudad','estado','municipio','parroquia','sector')),
+	constraint pklug primary key (cod_lugar)
+);
+
+create table lugarp (
 	cod_lugarp varchar(20) not null,
+	descripcion varchar(50) not null,
+	tipo varchar (15) not null,
+	cod_lugar varchar(20),
 	check (tipo in ('ciudad','estado','municipio','parroquia','sector')),
 	constraint pklug primary key (cod_lugar)
 );
@@ -86,7 +95,7 @@ create table sede (
 create table horario (
 	ano_ini varchar(2) not null,
 	ano_fin varchar(2) not null,
-	dia int not null,
+	dia varchar(10) not null,
 	hora_ini varchar(5) not null,
 	hora_fin varchar(5) not null,
 	cod_sede varchar(20) not null,
@@ -116,7 +125,7 @@ create table asistencia (
 	ci_jugador int(8) not null,
 	ano_ini varchar(2) not null,
 	ano_fin varchar(2) not null,
-	dia int not null,
+	dia varchar(10) not null,
 	cod_sede varchar(20) not null,
 	cod_categoria varchar(20) not null,
 	constraint pkasistencia primary key(hora_llegada,ci_jugador, ano_ini, ano_fin, dia, cod_sede,cod_categoria)
@@ -301,7 +310,7 @@ create table plan_entrenamiento(
 	tipo varchar(20) not null,
 	ano_ini varchar(20) not null,
 	ano_fin varchar(20) not null,
-	dia int not null,
+	dia varchar(10) not null,
 	cod_sede varchar(20) not null,
 	cod_categoria varchar(20) not null,
 	constraint pkplanentrenamiento primary key(id)
