@@ -38,7 +38,7 @@ alter table asistencia add constraint fkcategoria3 foreign key (cod_categoria) r
 alter table asistencia add constraint fksede8 foreign key (cod_sede) references sede(cod_sede);
 
 alter table gol add constraint fkjugador2 foreign key (ci_jugador) references jugadores(ci);
-alter table gol add constraint fkposicion1 foreign key (cod_posicion) references posicion(cod_lugar);
+alter table gol add constraint fkposicion1 foreign key (cod_posicion) references posicion(tipo_pos);
 alter table gol add constraint fkconsecutivo foreign key (consecutivo) references partido(consecutivo);
 
 alter table cambio_color add constraint fkuniformes foreign key (cod_uniforme) references producto(cod_producto);
@@ -51,20 +51,21 @@ alter table infooc add constraint fkrif foreign key (rif) references proveedor(r
 alter table detalle_compra add constraint fkoc foreign key (oc) references infooc(oc);
 alter table detalle_compra add constraint fkproducto foreign key (cod_producto) references producto(cod_producto);
 
-alter table ajuste add constraint fkproducto foreign key (cod_producto) references producto(cod_producto);
+alter table ajustes add constraint fkproducto1 foreign key (cod_producto) references producto(cod_producto);
 
 alter table inscripcion add constraint fksede5 foreign key (cod_sede) references sede(cod_sede);
 alter table inscripcion add constraint fkjugador3 foreign key (ci_jugador) references jugadores(ci);
 
-alter table mensualidad add constraint fkano_ini1 foreign key (ano_ini) references categoria(ano_desde);
-alter table mensualidad add constraint fkano_fin1 foreign key (ano_fin) references categoria(ano_hasta);
+alter table mensualidad add constraint fkano_ini1 foreign key (ano_ini) references inscripcion(ano_ini);
+alter table mensualidad add constraint fkano_fin1 foreign key (ano_fin) references inscripcion(ano_fin);
+alter table mensualidad add constraint ci_jugador foreign key (ci_jugador) references inscripcion(ci_jugador);
 
 alter table factura_uniforme add constraint fksede6 foreign key (cod_sede) references sede(cod_sede);
 alter table factura_uniforme add constraint fkrep foreign key (ci_representante) references representantes(ci);
 
-alter table pago_uniforme add constraint fkfact foreign key (numeracion_fac) references factura_uniforme(numeracion_fac);
+alter table pago_uniforme add constraint fkfact foreign key (numeracion_fac) references factura_uniforme(numeracion);
 
-alter table detalle_uniforme add constraint fkcodproducto foreign key (cod_uniforme) references producto(codigo);
+alter table detalle_uniforme add constraint fkcodproducto foreign key (cod_uniforme) references producto(cod_producto);
 
 alter table pruebas add constraint fkjugador foreign key (ci_jugador) references jugadores(ci);
 
