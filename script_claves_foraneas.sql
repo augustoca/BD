@@ -80,4 +80,4 @@ alter table duracion_plan_entrenamiento add constraint fkejercicio foreign key (
 alter table duracion_plan_entrenamiento add constraint fkcategoria5 foreign key (cod_categoria) references categoria(cod_categoria);
 alter table duracion_plan_entrenamiento add constraint fkposicion2 foreign key (cod_posicion) references posicion(tipo_pos);
 
-/*alter table lugar add constraint fklugarp foreign key (cod_lugarp) references lugar(cod_lugarp);*/
+alter table lugar add constraint fklugarp foreign key (cod_lugarp) references lugar(cod_lugarp);
