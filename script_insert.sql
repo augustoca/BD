@@ -1,22 +1,22 @@
 use futbol;
 
-insert into jugadores values (27585697,'Juan','Paolo',4165456897,'4to','padre','M','1','Medio',10424515,'Los chichimecas');
-insert into jugadores values (27585698,'Pedro','Perez',4165456898,'4to','padre','M','1','Medio',8424515,'Los chichimecas');
-insert into jugadores values (27585699,'Jose','Ruiz',4165456899,'6to','padre','M','3','Portero',9424515,'Los chichimecas');
-insert into jugadores values (27585696,'Juana','Paola',4165456891,'5to','hermano','F','2','Extremo',10433215,'Cruz Azul');
-insert into jugadores values (27585695,'Mirko','Tripalo',4165456893,'5to','primo','M','2','Lateral',1288315,'Tachira');
+insert into jugadores values (27585697,'Juan','Paolo',4165456897,'4to','padre','M','1','Medio',10424515,'Los chichimecas','2001/10/2');
+insert into jugadores values (27585698,'Pedro','Perez',4165456898,'4to','padre','M','1','Medio',8424515,'Los chichimecas','2002/10/2');
+insert into jugadores values (27585699,'Jose','Ruiz',4165456899,'6to','padre','M','3','Portero',9424515,'Los chichimecas','2004/10/2');
+insert into jugadores values (27585696,'Juana','Paola',4165456891,'5to','hermano','F','2','Extremo',10433215,'Cruz Azul','2003/10/2');
+insert into jugadores values (27585695,'Mirko','Tripalo',4165456893,'5to','primo','M','2','Lateral',1288315,'Tachira','2005/10/2');
 
-insert into representantes values (7585697,'Jeremy','Paolo',2125236897,2125244897,2124244897,'M','Washington','Caracas','1');
-insert into representantes values (8585697,'Pedro','Perez',2125432898,2125456897,2125444897,'M','Quinta','Bello monte','2');
-insert into representantes values (9585697,'Julio','Ruiz',2125456899,2125246897,2125254897,'M','Tokyo','Caracas','1');
-insert into representantes values (23711591,'Yonder','Gomez',2125456891,2124736897,2124244897,'M','La vereda','La Vega','3');
-insert into representantes values (6585767,'Mijail','Tal',2125456893,2125249997,2124244897,'M','Martín','Latina','4');
+insert into representantes values (7585697,'Jeremy','Paolo',2125236897,2125244897,2124244897,'M','Washington','Caracas','1','Albanil');
+insert into representantes values (8585697,'Pedro','Perez',2125432898,2125456897,2125444897,'M','Quinta','Bello monte','2','Carpintero');
+insert into representantes values (9585697,'Julio','Ruiz',2125456899,2125246897,2125254897,'M','Tokyo','Caracas','1','profesor');
+insert into representantes values (23711591,'Yonder','Gomez',2125456891,2124736897,2124244897,'M','Rivas','La Vega','3','Buhonero');
+insert into representantes values (6585767,'Mijail','Tal',2125456893,2125249997,2124244897,'M','Martín','Latina','4','Ajedrecista');
 
-insert into trabajador values (158587432,'Miriam','Sol',212545212,212145212,'1987/11/24','VEN','F',NULL,'1','1','Secretaria');
-insert into trabajador values (18245789,'Juliana','Lopez',212545213,212245212,'1990/10/22','VEN','F','Tecnico','1','1','Supervisora');
-insert into trabajador values (11256987,'Alejandro','Jauregui',212545214,212345212,'1996/12/24','VEN','M',NULL,'2','2','Calienta_bancos');
-insert into trabajador values (20333567,'Pedro','Mendez',212545215,212445212,'1977/04/04','VEN','M','Administrativo','3','3','Limpiador');
-insert into trabajador values (19998543,'Steve','Melendi',212545216,212645212,'1968/01/29','USA','M','Entrenador','2','2','Entrenador');
+insert into trabajador values (158587432,'Miriam','Sol',212545212,212145212,2124244197,'1987/11/24','VEN','F',NULL,'1','1','Secretaria');
+insert into trabajador values (18245789,'Juliana','Lopez',212545213,212245212,2125444297,'1990/10/22','VEN','F','Tecnico','1','1','RR.HH');
+insert into trabajador values (11256987,'Alejandro','Jauregui',212545214,212345212,2125254397,'1996/12/24','VEN','M',NULL,'2','2','Calienta_bancos');
+insert into trabajador values (20333567,'Pedro','Mendez',212545215,212445212,2124244497,'1977/04/04','VEN','M','Limpia_Autos','3','3','Coordinador Administrativo');
+insert into trabajador values (19998543,'Steve','Melendi',212545216,212645212,2124244597,'1968/01/29','USA','M','Entrenador','2','2','Entrenador');
 
 insert into lugar values ('1','Caracas','ciudad',NULL);
 insert into lugar values ('2','Bello monte','municipio','1');
@@ -24,10 +24,10 @@ insert into lugar values ('3','La Vega','parroquia','1');
 insert into lugar values ('4','El Cafetal','municipio',NULL);
 insert into lugar values ('5','Caricuao','sector','1');
 
-insert into historial_trabajador values ('2005/01/24','2015/01/24','Mesera','Mesera','1',158587432);	
-insert into historial_trabajador values ('2002/03/24','2010/01/24','Actriz','Actriz','1',18245789);
-insert into historial_trabajador values ('2009/01/10','2010/01/24','Espía','Espía','1',11256987);
-insert into historial_trabajador values ('1999/03/24','2000/01/24','Actuario','Actuario','1',20333567);
+insert into historial_trabajador values ('2005/01/24','2015/01/24','Mesera','Mejoría','1',158587432);	
+insert into historial_trabajador values ('2002/03/24','2010/01/24','Actriz','falta de ganancia','1',18245789);
+insert into historial_trabajador values ('2009/01/10','2010/01/24','Espía','copia','1',11256987);
+insert into historial_trabajador values ('1999/03/24','2000/01/24','Actuario','','1',20333567);
 insert into historial_trabajador values ('2000/01/20','2018/01/24','Jugador','Jugador','3',19998543);
 
 insert into sede values ('1','Amigos','2002/04/20','San Andrés','El Bosque',50000,80000,'1');
@@ -42,11 +42,14 @@ insert into horario values ('2006','2007','Miercoles','11','1','2','3');
 insert into horario values ('2005','2006','Jueves','1','3','1','4');
 insert into horario values ('2004','2005','Viernes','3','5','3','5');
 
-insert into categoria values ('1','Preb','2008','2009');
-insert into categoria values ('2','Prea','2007','2008');
-insert into categoria values ('3','infantilc','2006','2007');
-insert into categoria values ('4','infantilb','2005','2006');
-insert into categoria values ('5','infantila','2004','2005');
+insert into categoria values ('1','Escuelita','2011','2012');
+insert into categoria values ('2','Pre Mini','2010','2010');
+insert into categoria values ('3','Mini','2009','2009');	
+insert into categoria values ('4','Preb','2007','2008');
+insert into categoria values ('5','Prea','2005','2006');
+insert into categoria values ('6','infantilc','2003','2004');
+insert into categoria values ('7','infantilb','2001','2002');
+insert into categoria values ('8','infantila','1999','2000');
 
 insert into proveedor values ('a1','1','Futbolillo','Julio',4143025891);
 insert into proveedor values ('a2','1','Zoom','Susana',4143025892);
