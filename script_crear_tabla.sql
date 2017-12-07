@@ -5,13 +5,14 @@ create table representantes (
 	ci int(11) not null,
 	nombre varchar(50) not null,
 	apellido varchar(50) not null, 
-	tel_casa varchar(50) not null, 
-	tel_ofi varchar(50) not null, 
-	tel_ul varchar(50) not null, 
+	tel_casa int(11) not null, 
+	tel_ofi int(11) not null, 
+	tel_cel int(11) not null, 
 	sexo char(1) not null, 
 	calle varchar(255) not null, 
 	urb varchar(255) not null,
 	cod_lugar varchar(20) not null,
+	profesion varchar(15),
 	check (sexo in ('M','F')), 
 	constraint pkci primary key (ci)
 );
@@ -28,6 +29,7 @@ create table jugadores (
 	posicion varchar(10) not null,
 	ci_representante int(11) not null,
 	equipo varchar(20) not null,
+	fec_nac date not null,
 	check (sexo in ('M','F')),
 	check (parentesco in ('Padre','Madre','Hermano','Hijo', 'Primo')), 
 	constraint pkci primary key(ci)
@@ -39,6 +41,7 @@ create table trabajador (
 	apellido varchar(50) not null, 
 	tel_casa int(11) not null, 
 	tel_ofi int(11) not null, 
+	tel_cel int(11) not null,
 	fec_nac date, 
 	nacionalidad varchar(20) not null, 
 	sexo char(1) not null, 
@@ -93,8 +96,8 @@ create table sede (
 );
 
 create table horario (
-	ano_ini varchar(2) not null,
-	ano_fin varchar(2) not null,
+	ano_ini varchar(4) not null,
+	ano_fin varchar(4) not null,
 	dia varchar(10) not null,
 	hora_ini varchar(5) not null,
 	hora_fin varchar(5) not null,
@@ -106,8 +109,8 @@ create table horario (
 create table categoria (
 	cod_categoria varchar(20) not null,
 	nombre varchar(20) not null,
-	ano_desde varchar(2) not null,
-	ano_hasta varchar(2) not null,
+	ano_desde varchar(4) not null,
+	ano_hasta varchar(4) not null,
 	constraint pkcategoria primary key(cod_categoria,ano_desde,ano_hasta)
 );
 
@@ -123,8 +126,8 @@ create table proveedor(
 create table asistencia (
 	hora_llegada varchar(5) not null,
 	ci_jugador int(8) not null,
-	ano_ini varchar(2) not null,
-	ano_fin varchar(2) not null,
+	ano_ini varchar(4) not null,
+	ano_fin varchar(4) not null,
 	dia varchar(10) not null,
 	cod_sede varchar(20) not null,
 	cod_categoria varchar(20) not null,
@@ -132,8 +135,8 @@ create table asistencia (
 );
 
 create table notas(
-	ano_ini varchar(2) not null,
-	ano_fin varchar(2) not null,
+	ano_ini varchar(4) not null,
+	ano_fin varchar(4) not null,
 	lapso int(1) not null,
 	promedio float not null,
 	reprobado boolean not null,
@@ -166,8 +169,8 @@ create table equipo (
 create table partido(
 	consecutivo int not null auto_increment,
 	fecha date not null,
-	ano_ini varchar(2) not null,
-	ano_fin varchar(2) not null,
+	ano_ini varchar(4) not null,
+	ano_fin varchar(4) not null,
 	goles_local int not null,
 	goles_visitante int not null,
 	nombre_local varchar(20) not null,
@@ -183,8 +186,8 @@ create table gol (
 );
 
 create table cambio_color(
-	ano_ini varchar(2) not null,
-	ano_fin varchar(2) not null,
+	ano_ini varchar(4) not null,
+	ano_fin varchar(4) not null,
 	tipo_uniforme varchar(20) not null,
 	color_short varchar(20) not null,
 	color_franela varchar(20) not null,
@@ -240,8 +243,8 @@ create table inscripcion(
 	miercoles boolean, 
 	jueves boolean, 
 	viernes boolean,
-	ano_ini varchar(2) not null,
-	ano_fin varchar(2) not null,
+	ano_ini varchar(4) not null,
+	ano_fin varchar(4) not null,
 	ci_jugador int (8) not null,
 	cod_sede varchar(20) not null,
 	constraint pkins primary key(ano_ini,ano_fin,ci_jugador,cod_sede)
@@ -252,9 +255,10 @@ create table mensualidad(
 	consecutivo int not null auto_increment,
 	fecha date not null,
 	monto float not null,
-	ano_ini varchar(2) not null,
-	ano_fin varchar(2) not null,
+	ano_ini varchar(4) not null,
+	ano_fin varchar(4) not null,
 	banco varchar(10),
+	ci_jugador int not null,
 	comision varchar(10),
 	constraint pkmensualidad primary key(consecutivo,mes)
 );
@@ -308,8 +312,8 @@ create table plan_entrenamiento(
 	id int not null,
 	nombre varchar(20) not null,
 	tipo varchar(20) not null,
-	ano_ini varchar(20) not null,
-	ano_fin varchar(20) not null,
+	ano_ini varchar(4) not null,
+	ano_fin varchar(4) not null,
 	dia varchar(10) not null,
 	cod_sede varchar(20) not null,
 	cod_categoria varchar(20) not null,
